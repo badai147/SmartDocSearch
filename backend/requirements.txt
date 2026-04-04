@@ -1,0 +1,11 @@
+fastapi
+pydantic
+markitdown
+
+langchain
+langchain-core
+langchain-community
+langchain-openai
+langchain-chroma
+langchain-huggingface
+langchain-text-splitters
