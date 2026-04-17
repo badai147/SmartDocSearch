@@ -1,6 +1,17 @@
+from enum import Enum
 from typing import List, Optional
 
 from pydantic import BaseModel, Field
+
+
+class SSEEventType(str, Enum):
+    """SSE 流式事件类型"""
+    THINKING = "thinking"      # 思考阶段（问题改写、意图分析等）
+    SEARCHING = "searching"    # 检索阶段
+    ANSWER = "answer"          # 最终答案片段
+    SOURCES = "sources"       # 参考来源
+    ERROR = "error"            # 错误信息
+    DONE = "done"              # 流结束标记
 
 
 class SourceInfo(BaseModel):
